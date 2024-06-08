@@ -8,10 +8,11 @@ var cors = require('cors')
 
 
 
-require("dotenv").config
+require("dotenv").config()
+
 const app = express()
 const port = process.env.PORT;
-
+// console.log(port);
 app.use(cors())
 
 // routes import and API
@@ -23,5 +24,5 @@ app.use("/api/auth", require('./routes/auth'));
 // })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening port ${port}`)
 })
